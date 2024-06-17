@@ -18,6 +18,9 @@ public class UserService {
 
     public boolean login(String username, String password,User user) {
         user = userMapper.selectPassword(username);
+        if(user==null){
+            return false;
+        }
         String sqlPassword = user.getPassword();
         if(!SecurityUtils.verifyPassword(password,sqlPassword)){
             return false;

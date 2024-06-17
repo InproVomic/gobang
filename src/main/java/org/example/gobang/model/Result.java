@@ -1,5 +1,8 @@
 package org.example.gobang.model;
 
+import lombok.Data;
+
+@Data
 public class Result {
     private Integer code;
     private String msg;

@@ -16,6 +16,9 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         Cookie[] cookies = request.getCookies();
         if (cookies == null) {
+            response.setStatus(302);
+            response.getWriter().write("cookies为空！");
+            response.sendRedirect("/login.html");
             log.error("cookies为空！");
             return false;
         }
@@ -29,12 +32,17 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
 
         if(token == null || token.isEmpty()){
+            response.setStatus(302);
+            response.getWriter().write("token为空！");
+            response.sendRedirect("/login.html");
             log.error("token为空！");
             return false;
         }
 
         if(!JwtUtils.checkToken(token)){
-            log.error("token值不正确！");
+            response.setStatus(302);
+            response.getWriter().write("token校验失败！");
+            response.sendRedirect("/login.html");
             return false;
         }
 
