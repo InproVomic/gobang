@@ -41,6 +41,9 @@ public class UserController {
 
     @RequestMapping("/register")
     public boolean register(String username, String password) {
+        if(username==null || password==null || username.isEmpty() || password.isEmpty()){
+            return false;
+        }
         return userService.register(username, password);
     }
 }
