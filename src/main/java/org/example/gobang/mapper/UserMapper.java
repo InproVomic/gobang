@@ -11,5 +11,5 @@ public interface UserMapper {
     public Integer insertUser(String username, String password);
 
     @Select("select user_id, username, password, score, total_count, win_count from user where username=#{username}")
-    public User selectPassword(String username);
+    public User selectByUsername(String username);
 }

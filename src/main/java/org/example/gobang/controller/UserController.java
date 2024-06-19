@@ -1,7 +1,9 @@
 package org.example.gobang.controller;
 
 import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.bcel.Const;
 import org.example.gobang.constants.Constants;
 import org.example.gobang.model.Result;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @RestController
 public class UserController {
     @Autowired
@@ -22,7 +25,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public Result login(String username, String password, HttpServletResponse response) {
-        User user = new User();
+        User user = userService.getUser(username);
         boolean result = userService.login(username, password,user);
         if(result){
             Map<String,Object> map = new HashMap<>();
@@ -45,5 +48,17 @@ public class UserController {
             return false;
         }
         return userService.register(username, password);
+    }
+
+    @RequestMapping("/userInfo")
+    public Result getUserInfo(HttpServletRequest request) {
+       log.info("已经进入getUserInfo方法内部");
+       User user = userService.getUserInfo(request);
+       if (user==null){
+           log.error("获取User失败！");
+           return Result.error("获取User信息失败！");
+       }
+       log.info("获取user成功！");
+       return Result.success(user);
     }
 }

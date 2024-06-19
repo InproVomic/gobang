@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game_hall.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>匹配大厅</title>
 </head>
+
 <body>
-    进来啦！
+    <div class="nav">
+        五子棋对战
+    </div>
+    <div class="container">
+        <div>
+            <div id="screen"></div>
+            <div id="match-button">
+                开始匹配
+            </div>
+        </div>
+    </div>
 </body>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    $.ajax({
+        type: "post",
+        url: "userInfo",
+        success: function(result){
+            let screenDiv = document.querySelector("#screen")
+            let body = result.data
+            screenDiv.innerHTML = '玩家: ' + body.username + "   <br><br>分数: " + body.score 
+                    + " <br><br>比赛场次: " + body.totalCount + "   <br><br>获胜场数: " + body.winCount
+        },
+        error: function(){
+            alert("获取用户信息失败")
+        }
+    })
+    
+</script>
+
 </html>
