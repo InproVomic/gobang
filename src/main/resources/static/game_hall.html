@@ -16,7 +16,7 @@
     <div class="container">
         <div>
             <div id="screen"></div>
-            <div id="match-button">
+            <div id="match-button" onclick="getMatch()">
                 开始匹配
             </div>
         </div>
@@ -37,7 +37,63 @@
             alert("获取用户信息失败")
         }
     })
-    
+    let websocketUrl = "ws://" + location.host + "/findMatch"
+    let websocket = new WebSocket(websocketUrl)
+
+    websocket.onopen = function(){
+        console.log("onopen")
+    }
+    websocket.onerror = function(){
+        console.log("onerror")   
+    }
+    websocket.onclose = function(){
+        console.log("onclose")
+    }
+    websocket.onmessage = function(result){
+        let resp = JSON.parse(result.data)
+        let matchButton = querySelector("#match-button")
+        if(!resp.ok){
+            alert("游戏大厅中接收到了失败相应")
+            return
+        }
+        if(resp.message == "startMatch"){
+            console.log("进入匹配队列成功！")
+            matchButton.innerHTML = "匹配中...(点击停止)"
+        }else if(resp.message == "stopMatch"){
+            console.log("离开匹配队列成功！")
+            matchButton.innerHTML = "开始匹配"
+        }else if(resp.message == "matchSuccess"){
+            console.log("匹配到对手,进入游戏房间")
+            location.href = "game_room.html"
+        }else if(resp.message == "repeatConnect"){
+            alert("该账号已在线！")
+            localStorage.href = "login.html"
+        }else{
+            console.log("收到非法相应,message:" + resp.message)
+        }
+    }
+    function getMatch(){
+        if(websocket.readyState == websocket.OPEN){
+            let matchButton = querySelector("#match-button")
+            if(matchButton.innerHTML == "开始匹配"){
+                console.log("开始匹配")
+                websocket.send(JSON.stringify({
+                    message: "startMatch"
+                }))
+            }else if(matchButton.innerHTM == "匹配中...(点击停止)"){
+                console.log("停止匹配")
+                websocket.send(JSON.stringify({
+                    message: "stopMatch"
+                }))
+            }else{
+                alert("当前连接已断开，请重新登录！")
+                location.href = "login.html"
+            }
+        }else{
+            alert("用户连接已断开！")
+            location.href = "login.html"
+        }
+    }
 </script>
 
 </html>
