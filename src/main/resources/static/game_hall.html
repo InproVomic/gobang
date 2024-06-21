@@ -52,7 +52,7 @@
         let resp = JSON.parse(result.data)
         let matchButton = document.querySelector("#match-button")
         if(!resp.ok){
-            alert("游戏大厅中接收到了失败相应"+resp.ok)
+            alert("游戏大厅中接收到了失败相应")
             return
         }
         if(resp.message == "startMatch"){
@@ -66,7 +66,7 @@
             location.href = "game_room.html"
         }else if(resp.message == "repeatConnect"){
             alert("该账号已在线！")
-            localStorage.href = "login.html"
+            location.href = "login.html"
         }else{
             console.log("收到非法相应,message:" + resp.message)
         }
@@ -80,12 +80,13 @@
                 websocket.send(JSON.stringify({
                     message: "startMatch"
                 }))
-            }else if(matchButton.innerHTM == "匹配中...(点击停止)"){
+            }else if(matchButton.innerHTML == "匹配中...(点击停止)"){
                 console.log("停止匹配")
                 websocket.send(JSON.stringify({
                     message: "stopMatch"
                 }))
             }else{
+                console.log(matchButton.innerHTML)
                 alert("当前连接已断开，请重新登录！")
                 location.href = "login.html"
             }

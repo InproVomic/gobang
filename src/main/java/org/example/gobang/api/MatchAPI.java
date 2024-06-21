@@ -3,7 +3,6 @@ package org.example.gobang.api;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.example.gobang.config.Matcher;
-import org.example.gobang.config.WebSocketConfig;
 import org.example.gobang.model.MatchRequest;
 import org.example.gobang.model.MatchResponse;
 import org.example.gobang.model.OnlineUserManager;
@@ -59,7 +58,7 @@ public class MatchAPI extends TextWebSocketHandler {
                     || onlineUserManager.getFromGameRoom(user.getUserId()) != null){
                 //有重复登录的情况
                 MatchResponse response = new MatchResponse();
-                response.setOk(false);
+                response.setOk(true);
                 response.setReason("禁止多开！");
                 response.setMessage("repeatConnect");
                 session.sendMessage(new TextMessage(objectMapper.writeValueAsString(response)));

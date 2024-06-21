@@ -550,3 +550,191 @@ Relying upon circular references is discouraged and they are prohibited by defau
 2024-06-21T17:26:12.533+08:00  INFO 8576 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
 2024-06-21T17:32:17.350+08:00  INFO 8576 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-06-21T17:32:17.356+08:00  INFO 8576 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:19:19.857+08:00  INFO 29164 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 29164 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:19:19.859+08:00  INFO 29164 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:19:20.521+08:00  INFO 29164 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:19:20.529+08:00  INFO 29164 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:19:20.529+08:00  INFO 29164 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:19:20.565+08:00  INFO 29164 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:19:20.566+08:00  INFO 29164 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2024-06-21T18:19:20.645+08:00  INFO 29164 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:19:20.645+08:00  INFO 29164 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:19:20.645+08:00  INFO 29164 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:19:20.954+08:00  INFO 29164 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:19:20.961+08:00  INFO 29164 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.417 seconds (process running for 1.79)
+2024-06-21T18:19:24.002+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:19:24.003+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:19:24.004+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-06-21T18:19:26.227+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:19:26.322+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-7] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14e6ca7c
+2024-06-21T18:19:26.324+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:19:26.462+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-10] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:19:26.463+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-10] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:19:26.465+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-10] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:19:26.490+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-1] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:19:32.443+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:19:32.445+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:19:32.447+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:20:38.852+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-7] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:20:41.657+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-8] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:20:41.657+08:00  INFO 29164 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():2
+2024-06-21T18:20:41.658+08:00  INFO 29164 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():1
+2024-06-21T18:20:51.595+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:20:51.595+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-2] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:20:51.597+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-2] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:20:51.601+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-2] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:20:52.402+08:00  INFO 29164 --- [gobang] [http-nio-9090-exec-5] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:21:45.096+08:00  INFO 29164 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:21:45.104+08:00  INFO 29164 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:21:47.359+08:00  INFO 16184 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 16184 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:21:47.361+08:00  INFO 16184 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:21:48.036+08:00  INFO 16184 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:21:48.049+08:00  INFO 16184 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:21:48.049+08:00  INFO 16184 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:21:48.088+08:00  INFO 16184 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:21:48.088+08:00  INFO 16184 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 696 ms
+2024-06-21T18:21:48.151+08:00  INFO 16184 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:21:48.151+08:00  INFO 16184 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:21:48.151+08:00  INFO 16184 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:21:48.449+08:00  INFO 16184 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:21:48.456+08:00  INFO 16184 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.408 seconds (process running for 1.738)
+2024-06-21T18:21:48.845+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:21:48.845+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:21:48.846+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-21T18:21:48.876+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:21:48.976+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c8561f3
+2024-06-21T18:21:48.977+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:21:49.158+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:21:49.159+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:21:49.161+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:21:49.173+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-4] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:21:50.377+08:00  INFO 16184 --- [gobang] [http-nio-9090-exec-5] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:23:38.144+08:00  INFO 16184 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:23:38.150+08:00  INFO 16184 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:23:40.752+08:00  INFO 2416 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 2416 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:23:40.755+08:00  INFO 2416 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:23:41.407+08:00  INFO 2416 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:23:41.416+08:00  INFO 2416 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:23:41.416+08:00  INFO 2416 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:23:41.466+08:00  INFO 2416 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:23:41.467+08:00  INFO 2416 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 686 ms
+2024-06-21T18:23:41.537+08:00  INFO 2416 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:23:41.537+08:00  INFO 2416 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:23:41.537+08:00  INFO 2416 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:23:41.841+08:00  INFO 2416 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:23:41.847+08:00  INFO 2416 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.362 seconds (process running for 1.684)
+2024-06-21T18:23:44.251+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:23:44.252+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:23:44.253+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-21T18:23:44.283+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:23:44.383+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e31fa5e
+2024-06-21T18:23:44.384+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:23:44.561+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-6] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:23:44.562+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-6] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:23:44.566+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-6] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:23:44.573+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-9] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:23:45.383+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-10] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:23:49.769+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-7] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:23:49.770+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-8] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:23:49.772+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-7] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:23:49.775+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-7] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:24:00.887+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-7] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:24:00.887+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-8] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:24:00.889+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-8] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:24:00.891+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-8] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:24:02.621+08:00  INFO 2416 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.config.Matcher        : 玩家xiangzi积分:1000,进入normal队列
+2024-06-21T18:41:28.768+08:00  INFO 2416 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:41:28.779+08:00  INFO 2416 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:41:35.248+08:00  INFO 7472 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 7472 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:41:35.250+08:00  INFO 7472 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:41:35.922+08:00  INFO 7472 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:41:35.937+08:00  INFO 7472 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:41:35.938+08:00  INFO 7472 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:41:35.981+08:00  INFO 7472 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:41:35.982+08:00  INFO 7472 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 704 ms
+2024-06-21T18:41:36.047+08:00  INFO 7472 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:41:36.047+08:00  INFO 7472 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:41:36.047+08:00  INFO 7472 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:41:36.313+08:00  INFO 7472 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:41:36.320+08:00  INFO 7472 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.359 seconds (process running for 1.716)
+2024-06-21T18:41:36.550+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:41:36.550+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:41:36.551+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-21T18:41:36.587+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:41:36.703+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ada5c2b
+2024-06-21T18:41:36.705+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:41:36.919+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-8] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:41:36.921+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-8] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:41:36.924+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-8] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:41:36.950+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-6] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:41:40.695+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-9] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:41:40.697+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-9] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:41:40.699+08:00  INFO 7472 --- [gobang] [http-nio-9090-exec-9] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:42:42.001+08:00  INFO 7472 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:42:42.010+08:00  INFO 7472 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:42:44.644+08:00  INFO 24012 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 24012 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:42:44.645+08:00  INFO 24012 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:42:45.318+08:00  INFO 24012 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:42:45.325+08:00  INFO 24012 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:42:45.326+08:00  INFO 24012 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:42:45.367+08:00  INFO 24012 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:42:45.367+08:00  INFO 24012 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 690 ms
+2024-06-21T18:42:45.434+08:00  INFO 24012 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:42:45.434+08:00  INFO 24012 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:42:45.434+08:00  INFO 24012 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:42:45.738+08:00  INFO 24012 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:42:45.746+08:00  INFO 24012 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.394 seconds (process running for 1.725)
+2024-06-21T18:44:11.137+08:00  INFO 29508 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 29508 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:44:11.139+08:00  INFO 29508 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:44:11.805+08:00  INFO 29508 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:44:11.818+08:00  INFO 29508 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:44:11.820+08:00  INFO 29508 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:44:11.859+08:00  INFO 29508 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:44:11.859+08:00  INFO 29508 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+2024-06-21T18:44:11.927+08:00  INFO 29508 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:11.927+08:00  INFO 29508 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:11.927+08:00  INFO 29508 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:12.220+08:00  INFO 29508 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:44:12.227+08:00  INFO 29508 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.366 seconds (process running for 1.718)
+2024-06-21T18:44:14.366+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:44:14.367+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:44:14.368+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-21T18:44:14.398+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:44:14.494+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@274f8a0e
+2024-06-21T18:44:14.495+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:44:14.700+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:44:14.701+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:44:14.703+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:44:14.731+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-6] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:44:18.312+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-9] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:44:18.313+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-9] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:44:18.316+08:00  INFO 29508 --- [gobang] [http-nio-9090-exec-9] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:44:51.797+08:00  INFO 29508 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:44:51.802+08:00  INFO 29508 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-21T18:44:53.698+08:00  INFO 12224 --- [gobang] [main] org.example.gobang.GobangApplication     : Starting GobangApplication using Java 17.0.10 with PID 12224 (E:\IdeaProjects\gobang\target\classes started by cbb123 in E:\IdeaProjects\gobang)
+2024-06-21T18:44:53.700+08:00  INFO 12224 --- [gobang] [main] org.example.gobang.GobangApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-21T18:44:54.354+08:00  INFO 12224 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2024-06-21T18:44:54.367+08:00  INFO 12224 --- [gobang] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-21T18:44:54.367+08:00  INFO 12224 --- [gobang] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-21T18:44:54.406+08:00  INFO 12224 --- [gobang] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-21T18:44:54.406+08:00  INFO 12224 --- [gobang] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 679 ms
+2024-06-21T18:44:54.469+08:00  INFO 12224 --- [gobang] [Thread-1] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:54.469+08:00  INFO 12224 --- [gobang] [Thread-3] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:54.469+08:00  INFO 12224 --- [gobang] [Thread-2] org.example.gobang.config.Matcher        : 当前matchQueue.size():0
+2024-06-21T18:44:54.755+08:00  INFO 12224 --- [gobang] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path ''
+2024-06-21T18:44:54.762+08:00  INFO 12224 --- [gobang] [main] org.example.gobang.GobangApplication     : Started GobangApplication in 1.36 seconds (process running for 1.684)
+2024-06-21T18:45:01.549+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-21T18:45:01.550+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-21T18:45:01.551+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-21T18:45:01.581+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-21T18:45:01.679+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e31fa5e
+2024-06-21T18:45:01.680+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-21T18:45:01.854+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:45:01.857+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-3] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:45:01.858+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-3] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:45:01.887+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-4] org.example.gobang.api.MatchAPI          : 玩家:xiangzi进入游戏大厅
+2024-06-21T18:45:04.400+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-7] o.e.gobang.controller.UserController     : 已经进入getUserInfo方法内部
+2024-06-21T18:45:04.402+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-7] org.example.gobang.service.UserService   : username:xiangzi
+2024-06-21T18:45:04.405+08:00  INFO 12224 --- [gobang] [http-nio-9090-exec-7] o.e.gobang.controller.UserController     : 获取user成功！
+2024-06-21T18:45:09.485+08:00  INFO 12224 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-21T18:45:09.489+08:00  INFO 12224 --- [gobang] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
