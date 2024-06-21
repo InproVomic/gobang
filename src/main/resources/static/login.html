@@ -32,7 +32,12 @@
     </div>
 </body>
 <script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/common.js"></script>
 <script>
+    let cookie = getCookie("user_token")
+    console.log("打印cookie前")
+    console.log(cookie)
+    console.log("打印cookie后")
     function login(){
         let username = document.querySelector("#username")
         let password = document.querySelector("#password")

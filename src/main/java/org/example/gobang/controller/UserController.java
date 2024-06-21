@@ -3,6 +3,7 @@ package org.example.gobang.controller;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.bcel.Const;
 import org.example.gobang.constants.Constants;
@@ -24,7 +25,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/login")
-    public Result login(String username, String password, HttpServletResponse response) {
+    public Result login(String username, String password, HttpServletResponse response, HttpServletRequest request) {
         User user = userService.getUser(username);
         boolean result = userService.login(username, password,user);
         if(result){
@@ -37,6 +38,8 @@ public class UserController {
             cookie.setPath("/");//表示对网站的所有路径生效
             cookie.setMaxAge(60 * 60 * 24);//设置过期时间为一天
             response.addCookie(cookie);
+            HttpSession httpSession = request.getSession(true);
+            httpSession.setAttribute("user",user);
             return Result.success("");
         }
         return Result.error("密码或用户名错误！");
