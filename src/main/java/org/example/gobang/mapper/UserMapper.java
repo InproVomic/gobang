@@ -12,4 +12,10 @@ public interface UserMapper {
 
     @Select("select user_id, username, password, score, total_count, win_count from user where username=#{username}")
     public User selectByUsername(String username);
+
+    @Select("update user set score = score + 30 where user_id = #{userId}")
+    public Integer userWin(Integer userId);
+
+    @Select("update user set score = score - 30 where user_id = #{userId}")
+    public Integer userLose(Integer userId);
 }

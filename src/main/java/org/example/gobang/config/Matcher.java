@@ -133,8 +133,6 @@ public class Matcher {
 
                 //4. 把玩家放到同一个房间对局中
                 Room room = new Room();
-                room.setUser1(user1.getUserId());
-                room.setUser2(user2.getUserId());
                 roomManager.add(room, room.getUser1(), room.getUser2());
 
                 //6. 发送信息给前端
