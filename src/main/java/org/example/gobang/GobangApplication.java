@@ -9,7 +9,7 @@ public class GobangApplication {
 
     public static ConfigurableApplicationContext applicationContext;
     public static void main(String[] args) {
-        SpringApplication.run(GobangApplication.class, args);
+        applicationContext = SpringApplication.run(GobangApplication.class, args);
     }
 
 }

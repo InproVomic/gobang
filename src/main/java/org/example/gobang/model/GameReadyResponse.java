@@ -8,7 +8,7 @@ public class GameReadyResponse {
     private boolean ok;
     private String reason;
     private String roomId;
-    private Integer thisUser;
-    private Integer thatUser;
+    private Integer thisUserId;
+    private Integer thatUserId;
     private Integer whiteUser;
 }

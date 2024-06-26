@@ -11,6 +11,7 @@ let gameInfo = {
 
 function setScreenText(me) {
     let screen = document.querySelector('#screen');
+    console.log("me"+me);
     if (me) {
         screen.innerHTML = "轮到你落子了!";
     } else {
@@ -59,7 +60,7 @@ websocket.onmessage = function(event) {
         gameInfo.thisUserId = resp.thisUserId;
         gameInfo.thatUserId = resp.thatUserId;
         gameInfo.isWhite = (resp.whiteUser == resp.thisUserId);
-
+        console.log(gameInfo);
         // 初始化棋盘
         initGame();
         // 设置显示区域的内容
@@ -209,6 +210,7 @@ function initGame() {
             // 增加一个按钮, 让玩家点击之后, 再回到游戏大厅~
             let backBtn = document.createElement('button');
             backBtn.innerHTML = '回到大厅';
+            backBtn.className = 'back'
             backBtn.onclick = function() {
                 location.replace('/game_hall.html');
             }

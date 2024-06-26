@@ -30,7 +30,7 @@ public class RoomManager {
 
     public Room getRoomFromUserId(Integer userId) {
         String roomId = userIdToRoomId.get(userId);
-        if(roomId != null) {
+        if(roomId == null) {
             return null;
         }
         return getRoomFromRoomId(roomId);

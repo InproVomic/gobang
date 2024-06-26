@@ -25,7 +25,7 @@ public class Room {
     private Integer whiteUser;
     private static final Integer MAX_ROW = 15;
     private static final Integer MAX_COL = 15;
-    private Integer[][] board = new Integer[MAX_ROW][MAX_COL];
+    private int[][] board = new int[MAX_ROW][MAX_COL];
 
     private ObjectMapper objectMapper;
     private OnlineUserManager onlineUserManager;
@@ -90,10 +90,12 @@ public class Room {
         if(response.getWinner()!=0){
             //胜负已分
             Integer winnerId = response.getWinner();
-            Integer loserId = response.getWinner().equals(user1.getUserId())? user1.getUserId() : user2.getUserId();
+            Integer loserId = response.getWinner().equals(user1.getUserId())? user2.getUserId() : user1.getUserId();
 
             userMapper.userWin(winnerId);
-            userMapper.userLose(winnerId);
+            userMapper.userLose(loserId);
+
+            log.info("winner:"+winnerId);
 
             roomManager.remove(roomId,user1.getUserId(),user2.getUserId());
         }
@@ -104,7 +106,7 @@ public class Room {
         int count = 1;
         for (int i = 1; i <= 4; i++) {
             try{
-                if(board[row][col-i].equals(chess)){
+                if(board[row][col-i] == chess){
                     ++count;
                 }else{
                     break;
@@ -115,7 +117,7 @@ public class Room {
         }
         for(int i = 1; i <= 4; ++i){
             try{
-                if(board[row][col+i].equals(chess)){
+                if(board[row][col+i] == chess){
                     ++count;
                 }else{
                     break;
@@ -132,7 +134,7 @@ public class Room {
         count = 1;
         for (int i = 1; i <= 4; i++) {
             try{
-                if(board[row-i][col].equals(chess)){
+                if(board[row-i][col] == chess){
                     ++count;
                 }else{
                     break;
@@ -144,7 +146,7 @@ public class Room {
 
         for(int i = 1; i <= 4; ++i){
             try{
-                if(board[row+i][col].equals(chess)){
+                if(board[row+i][col] == chess){
                     ++count;
                 }else{
                     break;
@@ -161,7 +163,7 @@ public class Room {
         count = 1;
         for (int i = 1; i <= 4; i++) {
             try {
-                if(board[row-i][col-i].equals(chess)){
+                if(board[row-i][col-i] == chess){
                     ++count;
                 }else{
                     break;
@@ -173,7 +175,7 @@ public class Room {
 
         for(int i = 1; i <= 4; ++i){
             try {
-                if(board[row+i][col+i].equals(chess)){
+                if(board[row+i][col+i] == chess){
                     ++count;
                 }else{
                     break;
@@ -190,7 +192,7 @@ public class Room {
         count = 1;
         for (int i = 1; i <= 4; i++) {
             try{
-                if(board[row+i][col-i].equals(chess)){
+                if(board[row+i][col-i] == chess){
                     ++count;
                 }else{
                     break;
@@ -202,7 +204,7 @@ public class Room {
 
         for(int i = 1; i <= 4; ++i){
             try{
-                if (board[row-i][col+i].equals(chess)){
+                if (board[row-i][col+i] == chess){
                     ++count;
                 }else{
                     break;
